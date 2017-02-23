@@ -216,6 +216,14 @@ on post-fs-data
     # Create directory used for camera
     mkdir /data/vendor/camera 0770 camera camera
 
+    # Notification LED
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/green/brightness
+    chown system system /sys/class/leds/blue/brightness
+
     #Create directories for Fingerprint
     mkdir /data/vendor/misc/qti_fp 0770 system system
     mkdir /data/vendor/misc/qti_fp/bg_estimation 0770 system system
