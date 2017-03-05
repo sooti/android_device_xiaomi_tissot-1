@@ -5,3 +5,5 @@ allow shell vendor_shell_exec:file read;
 allow shell treble_compat_exec:file read;
 allow shell treble_compat_exec:file open;
 
+# exfat external sd card
+allow untrusted_app exfat:file read;
