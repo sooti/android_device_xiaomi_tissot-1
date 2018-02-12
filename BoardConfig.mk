@@ -161,6 +161,10 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
 
+# Lineage Hardware
+BOARD_HARDWARE_CLASS += \
+    $(LOCAL_PATH)/lineagehw
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_tissot
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
