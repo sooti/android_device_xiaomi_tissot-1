@@ -1494,17 +1494,15 @@ case "$target" in
                 #governor settings
                 echo 1 > /sys/devices/system/cpu/cpu0/online
                 echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-                echo 0 > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-                echo 95 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
-                echo 60000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
-                echo 652800 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+                echo "19000 1401600:39000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+                echo 85 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+                echo 20000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
+                echo 1401600 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
                 echo 0 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-		echo 480000 > /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-                echo "80 652800:57 1036800:67 1401600:75 1689600:9 1804800:85 1958400:87" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+                echo "85 1401600:80" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
                 echo 39000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
                 echo 40000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
                 echo 652800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-		echo 0 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif
 
                 # re-enable thermal & BCL core_control now
                 echo 1 > /sys/module/msm_thermal/core_control/enabled
