@@ -183,9 +183,9 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
-# Fingerprint
+# Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.0-service-custom
+    libkeymaster1
 
 # FM
 PRODUCT_PACKAGES += \
