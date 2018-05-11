@@ -183,10 +183,6 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    libkeymaster1
-
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
