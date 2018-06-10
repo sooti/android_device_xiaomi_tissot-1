@@ -5,3 +5,8 @@ init_daemon_domain(treble_compat)
 
 allow treble_compat vendor_shell_exec:file rx_file_perms;
 allow treble_compat vendor_toolbox_exec:file rx_file_perms;
+allow treble_compat adsprpcd_file:dir getattr;
+allow treble_compat block_device:dir search;
+allow treble_compat persist_file:dir getattr;
+allow treble_compat storage_file:dir getattr;
+allow treble_compat system_data_file:dir getattr;

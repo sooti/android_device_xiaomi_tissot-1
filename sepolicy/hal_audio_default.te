@@ -1,0 +1,6 @@
+allow hal_audio_default persist_file:dir search;
+allow hal_audio_default persist_file:file read;
+allow hal_audio_default sysfs:dir read;
+allow hal_audio_default persist_file:file open;
+allow hal_audio_default sysfs:dir open;
+allow hal_audio_default persist_file:file getattr;
