@@ -1,7 +1,1 @@
 allow shell sysfs:file { read };
-allow shell treble_compat_exec:file entrypoint;
-allow shell vendor_shell_exec:file getattr;
-allow shell vendor_shell_exec:file read;
-allow shell treble_compat_exec:file read;
-allow shell treble_compat_exec:file open;
-
