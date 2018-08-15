@@ -35,7 +35,16 @@ endif # TARGET_2ND_ARCH is not empty
 endef
 
 $(foreach lib,$(VNDK_SP_LIBRARIES),\
-    $(eval $(call define-vndk-sp-lib,$(lib))))
+    $(eval $(call define-vndk-lib,$(lib),vndk-sp-gen,vndk-sp-28,)))
+$(foreach lib,$(VNDK_SP_EXT_LIBRARIES),\
+    $(eval $(call define-vndk-lib,$(lib),vndk-sp-ext-gen,vndk-sp,true)))
+$(foreach lib,$(EXTRA_VENDOR_LIBRARIES),\
+    $(eval $(call define-vndk-lib,$(lib),vndk-ext-gen,,true)))
+
+
+#-------------------------------------------------------------------------------
+# Phony Package
+#-------------------------------------------------------------------------------
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := vndk-sp
