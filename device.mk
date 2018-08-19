@@ -94,6 +94,9 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl \
     android.hardware.soundtrigger@2.0-service
 
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    libcutils \
+
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
