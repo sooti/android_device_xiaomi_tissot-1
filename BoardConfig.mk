@@ -225,8 +225,8 @@ TARGET_RIL_VARIANT := caf
 BOARD_ROOT_EXTRA_FOLDERS := dsp firmware persist
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/minimal
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := dsp firmware persist
