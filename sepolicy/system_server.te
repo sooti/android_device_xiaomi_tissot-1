@@ -2,7 +2,6 @@ allow system_server proc_touchpanel:dir search;
 allow system_server proc_touchpanel:file rw_file_perms;
 allow system_server storage_stub_file:dir getattr;
 allow system_server vendor_file:file read;
-allow system_server sysfs_keys:file rw_file_perms;
 allow system_server storage_stub_file:dir getattr;
 allow system_server keylayout:file rw_file_perms;
 
